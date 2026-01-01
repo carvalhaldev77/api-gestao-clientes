@@ -1,132 +1,95 @@
 API de Gestão de Clientes
 
-API RESTful desenvolvida em Node.js com foco em boas práticas de arquitetura, segurança e organização de código.
-O projeto simula um sistema real de gestão de clientes, com autenticação baseada em JWT e controle de acesso.
+➫ API RESTful desenvolvida em Node.js com foco em boas práticas de arquitetura, organização de código e escalabilidade.
+Este projeto simula um sistema real de gerenciamento de clientes utilizado em aplicações corporativas.
 
-🎯 Objetivo
+🚀 Tecnologias Utilizadas
 
-Demonstrar domínio prático de:
+↳ Node.js
 
-➜ Desenvolvimento backend com Node.js
+↳ Express
 
-➜ Arquitetura REST
+↳ JavaScript (ES6+)
 
-➜ Autenticação e autorização
+↳ Arquitetura em camadas (MVC)
 
-➜ Persistência de dados
+↳ Nodemon
 
-➜ Organização de código escalável
-
-➜ Boas práticas de segurança e estruturação
-
-
-🧱 Tecnologias Utilizadas
-
-⮑ Node.js
-
-⮑ Express
-
-⮑ SQLite
-
-⮑ JWT (JSON Web Token)
-
-⮑ bcryptjs
-
-⮑ Nodemon
+↳ Git & GitHub
 
 
 📁 Estrutura do Projeto
-api-gestao-clientes/
+src/
 │
-├── server.js
-├── package.json
-├── package-lock.json
-│
-└── src/
-    ├── app.js
-    ├── database/
-    │   └── database.js
-    ├── controllers/
-    │   ├── auth.controller.js
-    │   └── clients.controller.js
-    ├── routes/
-    │   ├── auth.routes.js
-    │   └── clients.routes.js
-    └── middlewares/
-        └── auth.middleware.js
+|-- controllers/     ➜ Lógica das requisições
+|-- routes/          ➜ Definição das rotas da API
+|-- database/        ➜ Conexão com banco de dados
+|-- middlewares/     ➜ Middlewares globais
+|
+|-- app.js           ➜ Configuração principal da aplicação
+|-- server.js        ➜ Inicialização do servidor
 
 
-▶️ Execução do Projeto
+⚙️ Funcionalidades
 
-⤷ Instalação de dependências
-- npm install
+➢ Cadastro de clientes
 
-⤷ Inicialização do servidor
-- npx nodemon server.js
+➢ Listagem de clientes
+
+➢ Atualização de dados
+
+➢ Remoção de registros
+
+➢ Estrutura pronta para autenticação e autorização
+
+➢ Organização seguindo boas práticas de back-end
 
 
-Servidor disponível em:
+▶️ Como executar o projeto
+
+1️⃣ Clone o repositório
+git clone https://github.com/carvalhaldev77/api-gestao-clientes.git
+
+2️⃣ Acesse a pasta do projeto
+cd api-gestao-clientes
+
+3️⃣ Instale as dependências
+npm install
+
+4️⃣ Inicie o servidor
+npm start
+
+
+O servidor estará rodando em:
 
 http://localhost:3000
 
 
-🔐 Autenticação
+📌 Padrões e Boas Práticas
 
-➞ A autenticação é realizada via JWT, garantindo acesso controlado às rotas protegidas.
+⮑ Separação clara de responsabilidades
 
-- Criar usuário
-POST /auth/register
+⮑ Código organizado e escalável
 
-- Login
-POST /auth/login
+⮑ Estrutura pronta para testes e autenticação
 
-
-O token retornado deve ser enviado no header:
-
-Authorization: Bearer <token>
+⮑ Projeto preparado para crescimento futuro
 
 
-📦 Rotas Protegidas
-- Criar cliente
-POST /clients
+📈 Próximos passos (roadmap)
 
-- Listar clientes
-GET /clients
+➫ Implementar autenticação com JWT
 
+➫ Validação de dados
 
-*Todas as rotas de clientes exigem autenticação válida.
+➫ Integração com banco de dados real (PostgreSQL ou MongoDB)
 
+➫ Documentação via Swagger
 
-🔒 Segurança Implementada
-
-➛ Hash de senhas com bcrypt
-
-➛ Autenticação via JWT
-
-➛ Middleware de proteção de rotas
-
-➛ Separação clara entre camadas da aplicação
-
-➛ Estrutura preparada para escalar
+➫ Testes automatizados
 
 
-🧩 Próximas Evoluções Planejadas
+👨‍💻 Autor
 
-Validação de dados com Zod
-
-Padronização global de erros
-
-Paginação e filtros
-
-Controle de permissões (roles)
-
-Deploy em ambiente cloud
-
-Documentação Swagger/OpenAPI
-
-
-👤 Autor
-
-🦅 Gabriel Carvalhal (Carvalhal Dev)
-➬ Desenvolvedor Backend em formação
-Foco em arquitetura limpa, segurança e escalabilidade.
+Gabriel Carvalhal
+Estudante de desenvolvimento backend e entusiasta de arquitetura de software.
